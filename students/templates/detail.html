@@ -9,7 +9,7 @@
 <br>
 <h4>{{students.course}} --- {{students.depart}}</h4>
 
-<a href="{% url 'students:update' student.id %}">update</a>
-<button type="submit"><a href="{% url 'students:delete student.id'%}">Delete</a></button>
+<a href="{% url 'students:update' students.id %}">update</a>
+<button type="submit"><a href="{% url 'students:delete students.id'%}">Delete</a></button>
 
 {% endblock %}

@@ -60,7 +60,7 @@ def Deleteview(request ,pk):
     students=get_object_or_404(Student,id=pk)
     if request.method=="POST":
         students.delete()
-        return HttpResponseRedirect(reverse('students:detail'))
+        return HttpResponseRedirect(reverse('students:detail',kwargs={'pk':students.id}))
     context={
             "students":students
         }
