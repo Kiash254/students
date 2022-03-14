@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+
+
+{% block body %}
+<h1>its kiash</h1>
+
+<div>
+    <h1><a href="{% url 'students:create' %}"> Create </a></h1>
+
+    {% for student in students %}
+    <h1><a href="{% url 'students:detail' student.id %}">{{ student.name }} </a> </h1>
+    {% endfor %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+
+{% block body %}
+<h1>please welcome to this platform my friends</h1>
+<a href="/">HOME</a>
+
+<h4>{{students.name}} ---- {{students.age}}</h4>
+
+<br>
+<h4>{{students.course}} --- {{students.depart}}</h4>
+
+<a href="{% url 'students:update' student.id %}">update</a>
+<button type="submit"><a href="{% url 'students:delete student.id'%}">Delete</a></button>
+
+{% endblock %}
